@@ -16,14 +16,3 @@ ______________________________________________________________
 
 <h1 align="center">Nitro Generator (BETA)</h1>
 <p align="center">
-
-
-  <p align="center">
-    Tutorial no discord <3
-  </p>
-</p> 
-
-
-
-<p align="center">
-  <a href="https://discord.gg/desk">Discord</a> •
