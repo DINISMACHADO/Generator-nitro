@@ -3,7 +3,7 @@ import string
 import os
 import time
 LICNECE = """
-By Machado and Barbosa
+By Machado
 """
 
 USE_WEBHOOK = True
@@ -57,20 +57,20 @@ class NitroGen:  # Initialise the class
         if os.name == "nt":  # If the system is windows
             print("")
             ctypes.windll.kernel32.SetConsoleTitleW(
-                "Gerador e checker de nitro by barbosa e machado")  # Change the
+                "Gerador e checker de nitro by machado")  # Change the
         else:  # Or if it is unix
-            print(f'\33]0;Gerador e checker de nitro by barbosa e machado\a',
+            print(f'\33]0;Gerador e checker de nitro by machado\a',
                   end='', flush=True)  # Update title of command prompt
 
         print(""" Ainda está em Beta mas já está funcionando // só precisa de sorte
                                                         """)  # Print the title card
         time.sleep(2)  # Wait a few seconds
         # Print who developed the code
-        self.slowType("Made by: barbosa & machado", .02)
+        self.slowType("Made by: machado", .02)
         time.sleep(1)  # Wait a little more
         # Print the first question
         self.slowType(
-            "\nInsira quantos codigos quer gerar e verificar : ", .02, newLine=False)
+            "\nInsire quantos codigos quer gerar e verificar : ", .02, newLine=False)
 
         try:
             num = int(input(''))  # Ask the user for the amount of codes
@@ -81,7 +81,7 @@ class NitroGen:  # Initialise the class
         if USE_WEBHOOK:
             # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
             self.slowType(
-                "Recomendo que voce coloque um Webhook: ", .02, newLine=False)
+                "Recomendo que coloques um Webhook: ", .02, newLine=False)
             url = input('')  # Get the awnser
             # If the url is empty make it be None insted
             webhook = url if url != "" else None
@@ -89,7 +89,7 @@ class NitroGen:  # Initialise the class
             if webhook is not None:
                 DiscordWebhook(  # Let the user know it has started logging the ids
                         url=url,
-                        content=f"```Quando um codigo valido for encontrado vai aparecer aqui para ser resgatado ( ass barbosa e machado <3 ) ```"
+                        content=f"```Quando um codigo valido for encontrado vai aparecer aqui para ser resgatado ( ass: machado <3 ) ```"
                     ).execute()
 
         # print() # Print a newline for looks
@@ -123,12 +123,12 @@ class NitroGen:  # Initialise the class
 
             if os.name == "nt":  # If the system is windows
                 ctypes.windll.kernel32.SetConsoleTitleW(
-                    f"Gerador & Checker Beta - {len(valid)} Valido | {invalid} Invalido - by barbosa and machado ")  # Change the title
+                    f"Gerador & Checker Beta - {len(valid)} Valido | {invalid} Invalido - by machado ")  # Change the title
                 print("")
             else:  # If it is a unix system
                 # Change the title
                 print(
-                    f'\33]0;Gerador & Checker Beta - {len(valid)} Valido | {invalid} Invalido - by barbosa and machado\a', end='', flush=True)
+                    f'\33]0;Gerador & Checker Beta - {len(valid)} Valido | {invalid} Invalido - by machado\a', end='', flush=True)
 
         print(f"""
 Resultados:
@@ -137,7 +137,7 @@ Resultados:
  Valid Codes: {', '.join(valid)}""")  # Give a report of the results of the check
 
         # Tell the user the program finished
-        input("\n! Pressione Enter 5 vezes para fechar o programa.")
+        input("\n! Pressiona Enter 5 vezes para fechar o programa.")
         [input(i) for i in range(4, 0, -1)]  # Wait for 4 enter presses
 
     # Function used to print text a little more fancier
